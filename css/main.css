@@ -4,23 +4,22 @@
 }
 
 .pendulum {
+  display: inline-block;
   width: 2px;
-  height: 100px;
+  height: 150px;
   background-color: black;
   margin: 0 auto;
+  margin: 0 64px;
   position: relative;
 
   -webkit-transform-origin: 50% 0;
   -webkit-animation-duration: 2s;
-  -webkit-animation-name: pendulum;
-  -webkit-animation-iteration-count: 3;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in-out;
-  animation-play-state: paused;
 }
 
-.pendulum:hover {
-  animation-play-state: running;
+.play {
+  -webkit-animation-name: pendulum;
 }
 
 .circle {
