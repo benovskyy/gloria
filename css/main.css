@@ -1,47 +1,170 @@
-.wrapper {
-  margin: 20px auto;
-  width: 1000px;
+/**
+ * @author: Svyatik;
+ * @version: 0.1;
+ */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  position: relative;
+}
+
+/**
+ * @section pendulum
+ * Set style and animation for main pendulum element
+ */
 
 .pendulum {
-  display: inline-block;
   width: 2px;
-  height: 150px;
+  height: 100px;
+  z-index: 5;
   background-color: black;
-  margin: 0 auto;
-  margin: 0 64px;
-  position: relative;
+  position: absolute;
 
   -webkit-transform-origin: 50% 0;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in-out;
+
+  -moz-transform-origin: 50% 0;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+
+  transform-origin: 50% 0;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 
-.play {
-  -webkit-animation-name: pendulum;
+.send-pendulum {
+  left: 0px;
 }
+
+.phone-pendulum {
+  z-index: 4;
+  height: 90px;
+  left: 58px;
+}
+
+.mob-pendulum {
+  z-index: 3;
+  left: 116px;
+}
+
+.email-pendulum {
+  z-index: 4;
+  height: 110px;
+  left: 174px;
+}
+
+.map-pendulum {
+  left: 232px;
+}
+
+/**
+ * @subsection circle
+ * Set stiles for circle
+ */
 
 .circle {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: black;
   position: absolute;
   bottom: -64px;
   left: -32px;
+  background-color: #1a81ea;
+  border: 2px solid white;
+  background-size: 100%;
+
+  -webkit-box-shadow: 0 0 16px -2px rgba(0,0,0,0.28);
+     -moz-box-shadow: 0 0 16px -2px rgba(0,0,0,0.28);
+          box-shadow: 0 0 16px -2px rgba(0,0,0,0.28);
 }
 
+.send-circle {
+  background-image: url('../img/send.png');
+}
+
+.phone-circle {
+  background-image: url('../img/tel.png');
+}
+
+.mob-circle {
+  background-image: url('../img/mob.png');
+}
+
+.email-circle {
+  background-image: url('../img/email.png');
+}
+
+.map-circle {
+  background-image: url('../img/map.png');
+}
+
+
+/**
+ * Class for start animation
+ */
+
+.play {
+  -webkit-animation-name: pendulum;
+     -moz-animation-name: pendulum;
+          animation-name: pendulum;
+}
+
+/**
+ * Main roles for pendulum animation
+ *
+ * @section animation
+ *
+ */
+
 @-webkit-keyframes pendulum {
-  from { transform: rotate(-30deg); }
-  10% { transform: rotate(30deg); }
-  20% { transform: rotate(-25deg); }
-  30% { transform: rotate(25deg); }
-  40% { transform: rotate(-15deg); }
-  50% { transform: rotate(15deg); }
-  60% { transform: rotate(-10deg); }
-  70% { transform: rotate(10deg); }
-  80% { transform: rotate(-4deg); }
-  90% { transform: rotate(4deg); }
-  to { transform: rotate(0); }
+  from { transform: rotate(0); }
+  10%  { transform: rotate(20deg); }
+  20%  { transform: rotate(-15deg); }
+  30%  { transform: rotate(15deg); }
+  40%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(-5deg); }
+  70%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-2deg); }
+  90%  { transform: rotate(2deg); }
+  to   { transform: rotate(0); }
+}
+
+@-moz-keyframes pendulum {
+  from { transform: rotate(0); }
+  10%  { transform: rotate(20deg); }
+  20%  { transform: rotate(-15deg); }
+  30%  { transform: rotate(15deg); }
+  40%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(-5deg); }
+  70%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-2deg); }
+  90%  { transform: rotate(2deg); }
+  to   { transform: rotate(0); }
+}
+
+@keyframes pendulum {
+  from { transform: rotate(0); }
+  10%  { transform: rotate(20deg); }
+  20%  { transform: rotate(-15deg); }
+  30%  { transform: rotate(15deg); }
+  40%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(-5deg); }
+  70%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-2deg); }
+  90%  { transform: rotate(2deg); }
+  to   { transform: rotate(0); }
 }

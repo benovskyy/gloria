@@ -1,12 +1,12 @@
 $ (document).ready (function () {
     $ ('.circle').on ('mousemove', function () {
 
-        $ (this).parent ().css ('webkitAnimation','none');
+        var element = $ (this).parent ();
+        $ (element).css ('webkitAnimation','none');
         setTimeout (function () {
-            $ ('.pendulum').css ('webkitAnimation','');
+            $ (element).css ('webkitAnimation','');
         }, 1);
 
-        $ (this).parent ().removeClass ('play');
         $ (this).parent ().addClass ('play');
-    })
+    });
 });
