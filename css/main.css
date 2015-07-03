@@ -70,7 +70,7 @@ body {
 
 /**
  * @subsection circle
- * Set stiles for circle
+ * Set style for circles
  */
 
 .circle {
@@ -111,7 +111,7 @@ body {
 
 
 /**
- * Class for start animation
+ * Class for animation start
  */
 
 .play {
@@ -120,8 +120,9 @@ body {
           animation-name: pendulum;
 }
 
+
 /**
- * Main roles for pendulum animation
+ * Main rules for pendulum animation
  *
  * @section animation
  *
