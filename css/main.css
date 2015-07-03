@@ -1,0 +1,48 @@
+.wrapper {
+  margin: 20px auto;
+  width: 1000px;
+}
+
+.pendulum {
+  width: 2px;
+  height: 100px;
+  background-color: black;
+  margin: 0 auto;
+  position: relative;
+
+  -webkit-transform-origin: 50% 0;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: pendulum;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+
+.pendulum:hover {
+  animation-play-state: running;
+}
+
+.circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  bottom: -64px;
+  left: -32px;
+}
+
+@-webkit-keyframes pendulum {
+  from { transform: rotate(-30deg); }
+  10% { transform: rotate(30deg); }
+  20% { transform: rotate(-25deg); }
+  30% { transform: rotate(25deg); }
+  40% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  70% { transform: rotate(10deg); }
+  80% { transform: rotate(-4deg); }
+  90% { transform: rotate(4deg); }
+  to { transform: rotate(0); }
+}
