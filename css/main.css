@@ -112,7 +112,11 @@ body {
 
 
 /**
+<<<<<<< HEAD
  * Class for start animation start
+=======
+ * Class for animation start
+>>>>>>> gh-pages
  */
 
 .play {
@@ -120,6 +124,7 @@ body {
      -moz-animation-name: pendulum;
           animation-name: pendulum;
 }
+
 
 /**
  * Main rules for pendulum animation
