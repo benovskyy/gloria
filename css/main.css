@@ -1,6 +1,7 @@
 /**
- * @author: Svyatik;
- * @version: 0.1;
+ * @package css
+ * @author: Svyatik
+ * @version: 0.2
  */
 
 html,
@@ -44,7 +45,7 @@ body {
 }
 
 .send-pendulum {
-  left: 0px;
+  left: 0;
 }
 
 .phone-pendulum {
@@ -70,7 +71,7 @@ body {
 
 /**
  * @subsection circle
- * Set stiles for circle
+ * Set style for circles
  */
 
 .circle {
@@ -111,7 +112,7 @@ body {
 
 
 /**
- * Class for start animation
+ * Class for start animation start
  */
 
 .play {
@@ -121,7 +122,7 @@ body {
 }
 
 /**
- * Main roles for pendulum animation
+ * Main rules for pendulum animation
  *
  * @section animation
  *

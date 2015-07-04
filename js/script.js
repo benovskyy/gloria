@@ -1,3 +1,9 @@
+/**
+ * @package js
+ * @author: Svyatik
+ * @version: 0.2
+ */
+
 $ (document).ready (function () {
     $ ('.circle').on ('mousemove', function () {
 
